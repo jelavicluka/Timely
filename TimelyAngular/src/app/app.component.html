@@ -1,0 +1,26 @@
+<h2>Timely</h2>
+
+<div class="container">
+  <button (click) = "openDialog()" (click) = "startTime()">
+    Start
+  </button>
+</div>
+
+<table>
+  <tr>
+    <th>Project</th>
+    <th>Start</th>
+    <th>Stop</th>
+    <th>Duration</th>
+  </tr>
+
+  <tbody>
+    <tr *ngFor="let pd of service.list">
+      <td>{{pd.projectName}}</td>
+      <td>{{pd.startTime}}</td>
+      <td>{{pd.stopTime}}</td>
+      <td>{{pd.duration}}</td>
+    </tr>
+  </tbody>
+
+</table>
